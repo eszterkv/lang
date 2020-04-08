@@ -1,0 +1,6 @@
+---
+title: 'Norsk: 1000 questions — 1000 answers in Norwegian'
+chapter: Introduction
+---
+
+# {_metadata.title}

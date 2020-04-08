@@ -1,5 +1,5 @@
 ---
-title: about
+title: About
 ---
 
-## ello this page is called {_metadata.title}
+This will be an online book.
