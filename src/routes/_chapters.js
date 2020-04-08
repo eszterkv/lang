@@ -3,14 +3,26 @@ import marked from 'marked'
 import path from 'path'
 
 export function getChapters () {
-  const slugs = fs.readdirSync('book')
-    .map(filename => filename.slice(0, -3))
+  const chapters = fs.readdirSync('book')
+    .filter(slug => path.extname(slug) === '' && slug[0] !== '.')
+    .map(slug => {
+      const title = `${slug[0].toUpperCase()}${slug.substr(1)}`
+      return { slug, title }
+    })
 
-  return slugs.map(getChapter)
+  return chapters
 }
 
-export function getChapter (slug) {
-  const file = `book/${slug}.md`
+export function getSubchapters (chapter) {
+  const slugs = fs.readdirSync(`book/${chapter}`)
+    .filter(file => path.extname(file) === '.md')
+    .map(file => file.slice(0, -3))
+
+  return slugs.map(slug => getChapter(chapter, slug))
+}
+
+export function getChapter (chapter, slug) {
+  const file = `book/${chapter}/${slug}.md`
   if (!fs.existsSync(file)) return null
 
   const markdown = fs.readFileSync(file, 'utf-8')
