@@ -19,9 +19,10 @@
 
 <style>
   nav {
-    border-bottom: 1px solid #111;
     padding: 0 1em;
-    font-size: 14px;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: .5px;
   }
@@ -44,7 +45,8 @@
   }
 
   a {
-    opacity: .6;
+    opacity: .4;
+
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;

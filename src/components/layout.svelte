@@ -1,6 +1,5 @@
 <script>
   export let title
-  export let chapter
 </script>
 
 <svelte:head>
@@ -8,6 +7,6 @@
 </svelte:head>
 
 <div>
-  <h5>{chapter || ''}</h5>
+  <h3>{title}</h3>
   <slot />
 </div>

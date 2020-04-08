@@ -2,17 +2,19 @@
   <title>{title}</title>
 </svelte:head>
 
-<h1>{title}</h1>
+<section>
+  <h1>{title}</h1>
 
-<ul>
-  {#each chapters as chapter}
-    <li>
-      <a rel="prefetch" href={`${parentSlug}/${chapter.slug}`}>
-        {chapter.title}
-      </a>
-    </li>
-  {/each}
-</ul>
+  <ul>
+    {#each chapters as chapter}
+      <li>
+        <a rel="prefetch" href={`${parentSlug}/${chapter.slug}`}>
+          {chapter.title}
+        </a>
+      </li>
+    {/each}
+  </ul>
+</section>
 
 <script context="module">
   export async function preload ({ params, query }) {
