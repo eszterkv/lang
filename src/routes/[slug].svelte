@@ -1,4 +1,12 @@
-<h1>{chapter.metadata.title}</h1>
+<svelte:head>
+  <title>{chapter.title}</title>
+</svelte:head>
+
+<h1>{chapter.title}</h1>
+
+<section>
+  {@html chapter.content}
+</section>
 
 <script>
   export let chapter

@@ -1944,6 +1944,11 @@ markdown-it@^9.1.0:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
+marked@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.8.2.tgz#4faad28d26ede351a7a1aaa5fec67915c869e355"
+  integrity sha512-EGwzEeCcLniFX51DhTpmTom+dSA/MG/OBUDjnWtHbEnjAH180VzUeAw+oE4+Zv+CoYBWyRlYOTR0N8SO9R1PVw==
+
 mdsvex@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.4.0.tgz#2407da9cf5476910631bb61906ba61ae68696988"

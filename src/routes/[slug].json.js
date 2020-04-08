@@ -1,4 +1,5 @@
 import fs from 'fs'
+import marked from 'marked'
 import path from 'path'
 
 const lookup = new Map()
@@ -28,15 +29,15 @@ function getChapter (slug) {
   if (!fs.existsSync(file)) return null
 
   const markdown = fs.readFileSync(file, 'utf-8')
-  const { metadata, content } = parseMarkdown(markdown)
+  const { title, content } = parseMarkdown(markdown)
 
-  return { slug, metadata, content }
+  return { slug, title, content }
 }
 
 function parseMarkdown (markdown) {
   const frontmatterRegex = /---\r?\n([\s\S]+?)\r?\n---/
   const [header, frontmatter] = markdown.match(frontmatterRegex)
-  const content = markdown.slice(header.length)
+  const content = marked(markdown.slice(header.length))
   const metadata = {}
 
   frontmatter.split('\n').forEach(line => {
@@ -46,5 +47,7 @@ function parseMarkdown (markdown) {
     metadata[key] = value
   })
 
-  return { metadata, content }
+  const { title } = metadata
+
+  return { title, content }
 }
