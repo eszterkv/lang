@@ -1,12 +1,12 @@
-import { getChapter } from './_chapters'
+import { getChapter } from '../_chapters'
 
 const lookup = new Map()
 
 export function get (req, res, next) {
-  const { slug } = req.params
+  const { chapter: parentSlug, slug } = req.params
 
   if (!lookup.has(slug) || process.env.NODE_ENV !== 'production') {
-    const chapter = getChapter(slug)
+    const chapter = getChapter(parentSlug, slug)
     lookup.set(slug, JSON.stringify(chapter))
   }
 
