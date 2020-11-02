@@ -2,7 +2,7 @@
 
 ## Why?
 
-Oh, I just wanted to code an online book, try Svelte, and learn some Norwegian. The idea is based on [1000 Questions 1000 Answers](https://lexika.hu/angol/tankonyvek/1000-questions-1000-answers-4ed), a hugely successful book written by an English teacher I’ve had the honour to meet several times while attending courses at her language school.
+Oh, I just wanted to code an online book, try Svelte, and learn some ~Norwegian~ French. The idea is based on [1000 Questions 1000 Answers](https://lexika.hu/angol/tankonyvek/1000-questions-1000-answers-4ed), a hugely successful book written by an English teacher I’ve had the honour to meet several times while attending courses at her language school.
 
 ## The tech
 
